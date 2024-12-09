@@ -1,2 +1,2 @@
 # hangman2C
-A console based 2-player hangman game
+A console based hangman game
