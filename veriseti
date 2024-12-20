@@ -33,7 +33,7 @@ kelimeler = [
 ]
 
 with open("kelime_dataset.txt", mode="w", encoding="utf-8") as file:
-    file.write("Kelime\tKategori\tZorluk\n")
+    file.write("Kelime\tKategori\t")
     for kelime in kelimeler:
         file.write(f"{kelime['Kelime']}\t{kelime['Kategori']}\t")
 
