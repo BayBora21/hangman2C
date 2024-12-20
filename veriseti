@@ -11,7 +11,6 @@ def dosyadan_kelime_sec(dosya_adi="kelime_dataset.txt"):
             return {
                 "Kelime": secilen_kelime[0],
                 "Kategori": secilen_kelime[1],
-                "Zorluk": secilen_kelime[2],
             }
     except FileNotFoundError:
         print("Dosya bulunamadı!")
@@ -19,24 +18,24 @@ def dosyadan_kelime_sec(dosya_adi="kelime_dataset.txt"):
 
 # TXT dosyasına yazma
 kelimeler = [
-    {"Kelime": "Kedi", "Kategori": "Hayvanlar", "Zorluk": "Kolay"},
-    {"Kelime": "İzmir", "Kategori": "Şehirler", "Zorluk": "Kolay"},
-    {"Kelime": "Muz", "Kategori": "Meyveler", "Zorluk": "Kolay"},
-    {"Kelime": "Org", "Kategori": "Müzik Aletleri", "Zorluk": "Kolay"},
-    {"Kelime": "Panter", "Kategori": "Hayvanlar", "Zorluk": "Orta"},
-    {"Kelime": "Berlin", "Kategori": "Şehirler", "Zorluk": "Orta"},
-    {"Kelime": "Hurma", "Kategori": "Meyveler", "Zorluk": "Orta"},
-    {"Kelime": "Keman", "Kategori": "Müzik Aletleri", "Zorluk": "Orta"},
-    {"Kelime": "Ornitorenk", "Kategori": "Hayvanlar", "Zorluk": "Zor"},
-    {"Kelime": "Lüleburgaz", "Kategori": "Şehirler", "Zorluk": "Zor"},
-    {"Kelime": "Avokado", "Kategori": "Meyveler", "Zorluk": "Zor"},
-    {"Kelime": "Saksafon", "Kategori": "Müzik Aletleri", "Zorluk": "Zor"},
+    {"Kelime": "Kedi", "Kategori": "Hayvanlar"},
+    {"Kelime": "İzmir", "Kategori": "Şehirler"},
+    {"Kelime": "Muz", "Kategori": "Meyveler"},
+    {"Kelime": "Org", "Kategori": "Müzik Aletleri"},
+    {"Kelime": "Panter", "Kategori": "Hayvanlar"},
+    {"Kelime": "Berlin", "Kategori": "Şehirler"},
+    {"Kelime": "Hurma", "Kategori": "Meyveler"},
+    {"Kelime": "Keman", "Kategori": "Müzik Aletleri"},
+    {"Kelime": "Ornitorenk", "Kategori": "Hayvanlar"},
+    {"Kelime": "Lüleburgaz", "Kategori": "Şehirler"},
+    {"Kelime": "Avokado", "Kategori": "Meyveler"},
+    {"Kelime": "Saksafon", "Kategori": "Müzik Aletleri"},
 ]
 
 with open("kelime_dataset.txt", mode="w", encoding="utf-8") as file:
     file.write("Kelime\tKategori\tZorluk\n")
     for kelime in kelimeler:
-        file.write(f"{kelime['Kelime']}\t{kelime['Kategori']}\t{kelime['Zorluk']}\n")
+        file.write(f"{kelime['Kelime']}\t{kelime['Kategori']}\t")
 
 # Seçilen kelimeyi gizli tutma
 secilen_kelime = dosyadan_kelime_sec()
