@@ -1,4 +1,4 @@
-ximport random
+import random
 
 # TXT dosyasından veri okuma
 
