@@ -1,2 +1,2 @@
 # hangman2C
-A console based hangman game
+A simple GUI python based hangman game
