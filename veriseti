@@ -1,0 +1,23 @@
+# veri seti
+kelimeler = [
+    {"Kelime": "Kedi", "Kategori": "Hayvanlar", "Zorluk": "Kolay"},
+    {"Kelime": "İzmir", "Kategori": "Şehirler", "Zorluk": "Kolay"},
+    {"Kelime": "Muz", "Kategori": "Meyveler", "Zorluk": "Kolay"},
+    {"Kelime": "Org", "Kategori": "Müzik Aletleri", "Zorluk": "Kolay"},
+    {"Kelime": "Panter", "Kategori": "Hayvanlar", "Zorluk": "Orta"},
+    {"Kelime": "Berlin", "Kategori": "Şehirler", "Zorluk": "Orta"},
+    {"Kelime": "Hurma", "Kategori": "Meyveler", "Zorluk": "Orta"},
+    {"Kelime": "Keman", "Kategori": "Müzik Aletleri", "Zorluk": "Orta"},
+    {"Kelime": "Ornitorenk", "Kategori": "Hayvanlar", "Zorluk": "Zor"},
+    {"Kelime": "Lüleburgaz", "Kategori": "Şehirler", "Zorluk": "Zor"},
+    {"Kelime": "Avokado", "Kategori": "Meyveler", "Zorluk": "Zor"},
+    {"Kelime": "Saksafon", "Kategori": "Müzik Aletleri", "Zorluk": "Zor"},
+]
+
+# TXT dosyası
+with open("kelime_dataset.txt", mode="w", encoding="utf-8") as file:
+    file.write("Kelime\tKategori\tZorluk\n")
+    for kelime in kelimeler:
+        file.write(f"{kelime['Kelime']}\t{kelime['Kategori']}\t{kelime['Zorluk']}\n")
+
+print("Veri seti başarıyla oluşturuldu: kelime_dataset.txt")
